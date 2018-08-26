@@ -1,0 +1,102 @@
+a {
+  color: #C20108;
+}
+
+button {
+  color: #444;
+  background-color: #fff;
+  border: 1px solid #444;
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 5px 15px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  line-height: normal;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #C20108;
+  color: #fff;
+}
+
+button.active {
+  background-color: #C20108;
+  color: #fff;
+  cursor: default;
+}
+
+.moy-logo-block {
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.moy-logo-block a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.moy-logo-block img {
+  width: 36px;
+  height: 36px;
+}
+
+.moy-logo-block strong {
+  margin-left: 7.2px;
+}
+
+.flex.row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex.col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.hint {
+  font-size: 12.8px;
+  color: #777;
+}
+
+input[type='text'] {
+  font-size: 16px;
+  padding: 4.8px;
+  color: #444;
+  background-color: #fff;
+  border: 1px solid #444;
+  box-sizing: border-box;
+  border-radius: 0px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.to-right {
+  float: right;
+}
+
+.fail {
+  color: #FF4136;
+}
+
+.success {
+  color: #2ECC40;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  clear: both;
+  color: #C20108;
+}

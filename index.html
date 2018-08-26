@@ -1,1 +1,95 @@
-Hello World
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Moy.Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      body {
+        background-color: #fff;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+      .container {
+        background-color: #fff;
+        line-height: 1.6;
+        font-size: 16px;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: #444;
+      }
+      @media only screen and (min-width: 650px) {
+        .container {
+          max-width: 600px;
+          border: 2px solid #C20108;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 6px auto;
+        }
+      } 
+      .row + .row {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='flex row' style='justify-content: space-around; margin-bottom: 10px;'>
+        <div class="moy-logo-block"><a href="https://moy.design" target="_blank">
+          <img src="/moy.svg"><strong>MOY</strong></a>
+        </div>
+      </div>
+      <div class='row'>
+        <h2>Welcome to Moy.Design!</h2>
+        <p>We don't like the Web as it is today. It's heavy, overloaded with scripts, images, counters, social buttons, web fonts, etc. It's slow. It's clumsy. We think it can be better.</p>
+        <p>Moy.Design browser plugin changes the appearance of websites. It serves a number of purposes:</p>
+        <ul>
+          <li>Provide a way to see information from different websites in a unified way, which is customizable by end users.</li>
+          <li>Make web pages lighter, with less scripts, images, styling and other heavy and often unnecessary stuff.</li>
+          <li>Make web pages more readable, human-friendly, eye-friendly.</li>
+          <li>Make web pages mobile-friendly.</li>
+        </ul>
+      </div>
+      <div class='row'>
+        <button id='installBut'>Click here to install</button>
+      </div>
+      <div class='row'>
+        <p>...or choose one of the browser-specific links below:</p>
+        <ul>
+           <li><a href="https://chrome.google.com/webstore/detail/kgepfphemgiidklhpnfoobmoieiglgon" target="_blank">Chrome plugin</a></li>
+           <li><a href="https://moy.design/firefox-ext/moydesign-2.1.1-an+fx.xpi" target="_blank">Firefox plugin</a> (works on desktop and Android)</li>
+        </ul>
+        <p>When the plugin's installed, it will show a welcome page with some examples to test it.</p>
+      </div>
+      <div class='row'>
+        <h2>Get help</h2>
+        <p>If something is unclear or seems buggy (e.g. the plugin shows no looks for a page or renders a page incorrectly), please feel free to:</p>
+        <ul>
+           <li><a href="https://github.com/MoyDesign/MoyPlugin/issues">file an issue</a> in our GitHub repository</li>
+           <li>ask for help in the <a href="https://groups.io/g/moy">mailing list</a></li>
+           <li>ask for help directly: <a href="mailto:info@moy.design">info@moy.design</a></li>
+           <li>contact <a href="https://github.com/dsavenko">me</a> personally.</li>
+        </ul>
+      </div>
+      <div class='row'>
+        <h2>In-depth documentation</h2>
+        <p>Detailed documentation about the plugin, including how to create your own looks, is available <a href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'>here</a>.</p>
+      </div>
+    </div>
+    <script src="/lib/browser-polyfill.min.js"></script>
+    <script src="/src/welcome.js"></script>
+  </body>
+</html>
