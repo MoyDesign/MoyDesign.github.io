@@ -16,6 +16,12 @@ button {
   font-size: 16px;
 }
 
+button.large {
+  font-size: 24px;
+  display: block;
+  margin: 24px;
+}
+
 button:hover {
   background-color: #C20108;
   color: #fff;

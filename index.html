@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -64,15 +65,18 @@
         </ul>
       </div>
       <div class='row'>
-        <button id='installBut'>Click here to install</button>
+        <h2>Installation</h2>
+      </div>
+      <div class='flex row' style='justify-content: space-around;'>
+        <button id='installBut' class='large'>Click here to install the&nbsp;plugin</button>
       </div>
       <div class='row'>
         <p>...or choose one of the browser-specific links below:</p>
         <ul>
-           <li><a href="https://chrome.google.com/webstore/detail/kgepfphemgiidklhpnfoobmoieiglgon" target="_blank">Chrome plugin</a></li>
-           <li><a href="https://moy.design/firefox-ext/moydesign-2.1.1-an+fx.xpi" target="_blank">Firefox plugin</a> (works on desktop and Android)</li>
+           <li><a id='chromeBut' href="https://chrome.google.com/webstore/detail/kgepfphemgiidklhpnfoobmoieiglgon" target="_blank">Chrome plugin</a></li>
+           <li><a id='firefoxBut' href="/firefox-ext/moydesign-2.1.1-an+fx.xpi" target="_blank">Firefox plugin</a> (works on desktop and Android)</li>
         </ul>
-        <p>When the plugin's installed, it will show a welcome page with some examples to test it.</p>
+        <p>When the plugin's installed, it will show welcome page with some examples to test it on.</p>
       </div>
       <div class='row'>
         <h2>Get help</h2>
@@ -87,9 +91,27 @@
       <div class='row'>
         <h2>In-depth documentation</h2>
         <p>Detailed documentation about the plugin, including how to create your own looks, is available <a href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'>here</a>.</p>
+        <p>Happy hacking! :)</p>
       </div>
     </div>
-    <script src="/lib/browser-polyfill.min.js"></script>
-    <script src="/src/welcome.js"></script>
+    <script type="text/javascript">
+        function onInstallButClick() {
+            var isFirefox = typeof InstallTrigger !== 'undefined'
+            var isChrome = !!window.chrome && !!window.chrome.webstore
+            var href
+            if (isFirefox) {
+                href = firefoxBut.href
+            }
+            if (isChrome) {
+                href = chromeBut.href
+            }
+            if (href) {
+                window.open(href, '_blank')
+            } else {
+                alert('Looks like your browser is not supported :(')
+            }
+        }
+        installBut.onclick = onInstallButClick
+    </script>
   </body>
 </html>
