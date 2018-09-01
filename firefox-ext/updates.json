@@ -9,7 +9,8 @@
         { "version": "2.0.1", "update_link": "https://moy.design/firefox-ext/moydesign-2.0.1-an+fx.xpi" },
         { "version": "2.0.2", "update_link": "https://moy.design/firefox-ext/moydesign-2.0.2-an+fx.xpi" },
         { "version": "2.1.0", "update_link": "https://moy.design/firefox-ext/moydesign-2.1.0-an+fx.xpi" },
-        { "version": "2.1.1", "update_link": "https://moy.design/firefox-ext/moydesign-2.1.1-an+fx.xpi" }
+        { "version": "2.1.1", "update_link": "https://moy.design/firefox-ext/moydesign-2.1.1-an+fx.xpi" },
+        { "version": "2.1.2", "update_link": "https://moy.design/firefox-ext/moydesign-2.1.2-an+fx.xpi" }
       ]
     }
   }
