@@ -44,6 +44,9 @@
       .row + .row {
         margin-top: 10px;
       }
+      .row img {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -79,6 +82,13 @@
         <p>When the plugin's installed, it will show welcome page with some examples to test it on.</p>
       </div>
       <div class='row'>
+        <h2>Examples</h2>
+        <p>The original page:<img src='/huffpost-original.png'></p>
+        <p>The same page with one of the plugin's looks enabled:<img src='/huffpost-iv.png'></p>
+        <p>Another look:<img src='/huffpost-sepia.png'></p>
+        <p>The same look with the plugin menu:<img src='/huffpost-sepia-popup.png'></p>
+      </div>
+      <div class='row'>
         <h2>Get help</h2>
         <p>If something is unclear or seems buggy (e.g. the plugin shows no looks for a page or renders a page incorrectly), please feel free to:</p>
         <ul>
@@ -89,8 +99,11 @@
         </ul>
       </div>
       <div class='row'>
-        <h2>In-depth documentation</h2>
-        <p>Detailed documentation about the plugin, including how to create your own looks, is available <a href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'>here</a>.</p>
+        <h2>Technical overview</h2>
+        <p>The plugin uses <i>parsers</i> to extract valuable information from original pages and <i>templates</i> (or <i>'looks'</i>) to render the information.</p>
+        <p>Parsers and templates are located in the <a href='https://github.com/MoyDesign/MoyData'>MoyDesign's</a> MoyData GitHub repository. The plugin downloads them <b>all</b> the first time when it's installed. Then, it periodically checks for updates.</p>
+        <p>You can specify another GitHub account. This is useful for creating your own parsers and templates: just fork the main MoyData repo and point the plugin to your own account. Please, consider making a pull request to the original repo afterwards.</p>
+        <p>Detailed documentation about the plugin, including how to create your own parsers and templates, is available <a href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'><b>here</b></a>.</p>
         <p>Happy hacking! :)</p>
       </div>
     </div>
