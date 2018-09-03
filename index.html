@@ -36,7 +36,6 @@
         .container {
           max-width: 600px;
           border: 2px solid #C20108;
-          border-radius: 5px;
           padding: 10px;
           margin: 6px auto;
         }
@@ -44,8 +43,11 @@
       .row + .row {
         margin-top: 10px;
       }
-      .row img {
-        width: 100%;
+      .row.example img {
+        width: 80%;
+        margin: 10px auto 25px;
+        display: block;
+        border: 1px solid #444;
       }
     </style>
   </head>
@@ -81,7 +83,7 @@
         </ul>
         <p>When the plugin's installed, it will show welcome page with some examples to test it on.</p>
       </div>
-      <div class='row'>
+      <div class='row example'>
         <h2>Examples</h2>
         <p>The original page:<img src='/huffpost-original.png'></p>
         <p>The same page with one of the plugin's looks enabled:<img src='/huffpost-iv.png'></p>
@@ -103,8 +105,11 @@
         <p>The plugin uses <i>parsers</i> to extract valuable information from original pages and <i>templates</i> (or <i>'looks'</i>) to render the information.</p>
         <p>Parsers and templates are located in the <a href='https://github.com/MoyDesign/MoyData'>MoyDesign's</a> MoyData GitHub repository. The plugin downloads them <b>all</b> the first time when it's installed. Then, it periodically checks for updates.</p>
         <p>You can specify another GitHub account. This is useful for creating your own parsers and templates: just fork the main MoyData repo and point the plugin to your own account. Please, consider making a pull request to the original repo afterwards.</p>
-        <p>Detailed documentation about the plugin, including how to create your own parsers and templates, is available <a href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'><b>here</b></a>.</p>
+        <p>Detailed documentation about the plugin, including how to create your own parsers and templates, is available <a id='docsBut' href='https://github.com/MoyDesign/MoyDocs/blob/master/README.md#moydesign-documentation'><b>here</b></a>.</p>
         <p>Happy hacking! :)</p>
+      </div>
+      <div class='flex row' style='justify-content: space-around;'>
+        <button id='readTheDocsBut' class='large'>Read the&nbsp;docs</button>
       </div>
     </div>
     <a href="https://github.com/MoyDesign/MoyPlugin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
@@ -125,7 +130,11 @@
                 alert('Looks like your browser is not supported :(')
             }
         }
+        function onDocsButClick() {
+            window.open(docsBut.href)
+        }
         installBut.onclick = onInstallButClick
+        readTheDocsBut.onclick = onDocsButClick
     </script>
   </body>
 </html>
